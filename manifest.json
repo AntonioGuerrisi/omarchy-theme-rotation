@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "antonio.theme-rotation",
+  "name": "Theme Rotation",
+  "version": "1.1.0",
+  "author": "antonio",
+  "description": "Rotate installed themes randomly without consecutive repeats",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Theme Rotation",
+    "category": "Appearance",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "intervalMinutes": 30,
+      "paused": false,
+      "includedThemes": null
+    },
+    "schema": [
+      {
+        "key": "intervalMinutes",
+        "type": "number",
+        "label": "Interval (minutes)"
+      },
+      {
+        "key": "paused",
+        "type": "boolean",
+        "label": "Paused"
+      }
+    ]
+  }
+}
